@@ -895,7 +895,7 @@ function normalizeUrl(urlToNormalize) {
 }
 
 function resolveAppName(name, platform) {
-    const domain = getDomain(name) || 'pake';
+    const domain = getDomain(name) || 'gholl';
     return platform !== 'linux' ? capitalizeFirstLetter(domain) : domain;
 }
 function isValidName(name, platform) {
@@ -904,7 +904,7 @@ function isValidName(name, platform) {
         default: /^[a-zA-Z0-9]+([-a-zA-Z0-9])*$/,
     };
     const reg = platformRegexMapping[platform] || platformRegexMapping.default;
-    return !!name && reg.test(name);
+    return false;
 }
 async function handleOptions(options, url) {
     const { platform } = process;
